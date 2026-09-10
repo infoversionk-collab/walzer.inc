@@ -1,0 +1,1180 @@
+```css
+/* =========================================================
+   WALZER TEXT BALANCE FIX
+   文字被り・行間・余白の最終調整
+   ========================================================= */
+
+/* ---------- 共通 ---------- */
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+h1,h2,h3,p{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
+/* 文章が横方向に広がりすぎないよう制御 */
+.hero-copy,
+.about-content,
+.message-copy,
+.recruit-copy{
+  width:100%;
+  min-width:0;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-copy{
+  max-width:680px;
+}
+
+.hero h1{
+  max-width:760px;
+  margin:0;
+  line-height:1.28;
+  letter-spacing:.09em;
+  white-space:normal;
+}
+
+.hero-lead{
+  max-width:600px;
+  line-height:1.8;
+  margin:26px 0 8px;
+}
+
+.hero-en{
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about .split{
+  align-items:start;
+}
+
+.about-content{
+  max-width:760px;
+}
+
+.about-lead{
+  max-width:760px;
+  line-height:1.65;
+  margin-bottom:28px;
+}
+
+.about-text{
+  max-width:720px;
+  line-height:2.15;
+}
+
+.about-keywords{
+  margin-top:42px;
+  row-gap:14px;
+}
+
+
+/* =========================================================
+   SERVICE
+   ========================================================= */
+
+.service-head{
+  align-items:end;
+}
+
+.service-head > p{
+  max-width:620px;
+  margin:0;
+  line-height:2;
+}
+
+.service-card{
+  min-width:0;
+}
+
+.card-inner{
+  min-width:0;
+}
+
+.card-title{
+  line-height:1.45;
+  word-break:keep-all;
+}
+
+.card-en{
+  line-height:1.5;
+}
+
+.card-desc{
+  line-height:1.9;
+  margin-bottom:0;
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.message .split{
+  align-items:start;
+}
+
+.message-copy{
+  max-width:700px;
+  min-width:0;
+  padding-right:40px;
+}
+
+.message h3{
+  max-width:650px;
+  margin:0 0 28px;
+  line-height:1.55;
+  letter-spacing:.07em;
+}
+
+.message p{
+  max-width:650px;
+  line-height:2.2;
+  margin:0;
+}
+
+.signature{
+  line-height:1;
+  margin-top:38px;
+}
+
+
+/* =========================================================
+   RECRUIT
+   ========================================================= */
+
+.recruit .split{
+  align-items:start;
+}
+
+.recruit-copy{
+  max-width:700px;
+  min-width:0;
+}
+
+.recruit h3{
+  max-width:650px;
+  line-height:1.55;
+  margin:0 0 26px;
+  letter-spacing:.07em;
+}
+
+.recruit p{
+  max-width:650px;
+  line-height:2.15;
+  margin:0;
+}
+
+.side-words{
+  align-self:end;
+}
+
+
+/* =========================================================
+   COMPANY / CONTACT
+   ========================================================= */
+
+.bottom-grid{
+  align-items:start;
+}
+
+.bottom-title{
+  line-height:1.2;
+}
+
+.bottom-sub{
+  line-height:1.7;
+}
+
+.contact-box p{
+  line-height:2;
+  margin:18px 0 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:900px){
+
+  .container,
+  .hero-inner{
+    width:min(100% - 48px,1180px);
+  }
+
+  .hero-copy{
+    max-width:680px;
+  }
+
+  .hero h1{
+    max-width:650px;
+    font-size:clamp(52px,9vw,82px);
+    line-height:1.3;
+    letter-spacing:.075em;
+  }
+
+  .hero-lead{
+    max-width:560px;
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  .about-content,
+  .message-copy,
+  .recruit-copy{
+    max-width:720px;
+    padding-right:0;
+  }
+
+  .about-lead{
+    max-width:680px;
+    line-height:1.65;
+  }
+
+  .about-text{
+    max-width:680px;
+  }
+
+  .message h3,
+  .recruit h3{
+    max-width:680px;
+    line-height:1.6;
+  }
+
+  .message p,
+  .recruit p{
+    max-width:680px;
+  }
+
+  .side-words{
+    margin-top:10px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:560px){
+
+  .container,
+  .nav,
+  .hero-inner{
+    width:calc(100% - 36px);
+  }
+
+  /* HERO */
+  .hero{
+    min-height:720px;
+  }
+
+  .hero-inner{
+    padding-top:35px;
+  }
+
+  .hero-copy{
+    max-width:100%;
+  }
+
+  .hero-company{
+    font-size:13px;
+    letter-spacing:.14em;
+    margin-bottom:22px;
+    padding-left:45px;
+    line-height:1.6;
+  }
+
+  .hero-company:before{
+    width:32px;
+  }
+
+  .hero h1{
+    max-width:100%;
+    font-size:clamp(40px,11.5vw,55px);
+    line-height:1.4;
+    letter-spacing:.045em;
+    text-wrap:balance;
+  }
+
+  .hero-lead{
+    max-width:100%;
+    font-size:14px;
+    line-height:1.9;
+    letter-spacing:.07em;
+    margin-top:20px;
+  }
+
+  .hero-en{
+    font-size:12px;
+    line-height:1.7;
+    letter-spacing:.1em;
+  }
+
+
+  /* ABOUT */
+  .about{
+    padding:90px 0 110px;
+  }
+
+  .about .split{
+    gap:32px;
+  }
+
+  .about-lead{
+    max-width:100%;
+    font-size:25px;
+    line-height:1.75;
+    letter-spacing:.045em;
+    margin-bottom:24px;
+  }
+
+  .about-text{
+    max-width:100%;
+    font-size:13px;
+    line-height:2.15;
+    letter-spacing:.035em;
+  }
+
+  .about-keywords{
+    margin-top:34px;
+    gap:18px;
+    font-size:12px;
+    line-height:1.8;
+  }
+
+
+  /* SERVICE */
+  .services{
+    padding:85px 0 105px;
+  }
+
+  .service-head{
+    gap:28px;
+    margin-bottom:34px;
+  }
+
+  .service-head > p{
+    max-width:100%;
+    font-size:13px;
+    line-height:2;
+  }
+
+  .service-grid{
+    gap:16px;
+  }
+
+  .service-card,
+  .card-inner{
+    min-height:300px;
+  }
+
+  .card-inner{
+    padding:22px;
+  }
+
+  .card-number{
+    font-size:23px;
+  }
+
+  .card-title{
+    font-size:21px;
+    line-height:1.5;
+    letter-spacing:.055em;
+  }
+
+  .card-en{
+    font-size:10px;
+    letter-spacing:.16em;
+  }
+
+  .card-desc{
+    font-size:12px;
+    line-height:1.9;
+    margin-top:10px;
+  }
+
+
+  /* MESSAGE */
+  .message{
+    min-height:700px;
+    padding:95px 0 110px;
+  }
+
+  .message .split{
+    gap:34px;
+  }
+
+  .message-copy{
+    max-width:100%;
+    padding:0;
+  }
+
+  .message h3{
+    max-width:100%;
+    font-size:28px;
+    line-height:1.65;
+    letter-spacing:.045em;
+    margin-bottom:24px;
+  }
+
+  .message p{
+    max-width:100%;
+    font-size:13px;
+    line-height:2.15;
+    letter-spacing:.035em;
+  }
+
+  .signature{
+    font-size:35px;
+    margin-top:32px;
+  }
+
+
+  /* RECRUIT */
+  .recruit{
+    padding:90px 0 105px;
+  }
+
+  .recruit .split{
+    gap:32px;
+  }
+
+  .recruit-copy{
+    max-width:100%;
+    padding:0;
+  }
+
+  .recruit h3{
+    max-width:100%;
+    font-size:27px;
+    line-height:1.65;
+    letter-spacing:.045em;
+    margin-bottom:24px;
+  }
+
+  .recruit p{
+    max-width:100%;
+    font-size:13px;
+    line-height:2.15;
+    letter-spacing:.035em;
+  }
+
+  .side-words{
+    font-size:10px;
+    line-height:2;
+    letter-spacing:.28em;
+    margin-top:10px;
+  }
+
+
+  /* COMPANY */
+  .bottom{
+    padding:70px 0 48px;
+  }
+
+  .bottom-grid{
+    gap:42px;
+  }
+
+  .bottom-title{
+    font-size:30px;
+    line-height:1.25;
+  }
+
+  .bottom-sub{
+    font-size:11px;
+    line-height:1.8;
+  }
+
+  .bottom-links{
+    gap:14px 20px;
+    line-height:1.8;
+  }
+
+  .contact-box{
+    padding-top:28px;
+  }
+
+  .contact-box p{
+    font-size:12px;
+    line-height:2;
+  }
+
+
+  /* FOOTER */
+  .footer-inner{
+    gap:15px;
+  }
+
+  .footer-logo{
+    font-size:25px;
+  }
+
+  .footer-links{
+    gap:10px 15px;
+    line-height:1.8;
+  }
+}
+
+```css
+/* =========================================================
+   WALZER TEXT BALANCE FIX
+   文字被り・行間・余白の最終調整
+   ========================================================= */
+
+/* ---------- 共通 ---------- */
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+h1,h2,h3,p{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
+/* 文章が横方向に広がりすぎないよう制御 */
+.hero-copy,
+.about-content,
+.message-copy,
+.recruit-copy{
+  width:100%;
+  min-width:0;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-copy{
+  max-width:680px;
+}
+
+.hero h1{
+  max-width:760px;
+  margin:0;
+  line-height:1.28;
+  letter-spacing:.09em;
+  white-space:normal;
+}
+
+.hero-lead{
+  max-width:600px;
+  line-height:1.8;
+  margin:26px 0 8px;
+}
+
+.hero-en{
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about .split{
+  align-items:start;
+}
+
+.about-content{
+  max-width:760px;
+}
+
+.about-lead{
+  max-width:760px;
+  line-height:1.65;
+  margin-bottom:28px;
+}
+
+.about-text{
+  max-width:720px;
+  line-height:2.15;
+}
+
+.about-keywords{
+  margin-top:42px;
+  row-gap:14px;
+}
+
+
+/* =========================================================
+   SERVICE
+   ========================================================= */
+
+.service-head{
+  align-items:end;
+}
+
+.service-head > p{
+  max-width:620px;
+  margin:0;
+  line-height:2;
+}
+
+.service-card{
+  min-width:0;
+}
+
+.card-inner{
+  min-width:0;
+}
+
+.card-title{
+  line-height:1.45;
+  word-break:keep-all;
+}
+
+.card-en{
+  line-height:1.5;
+}
+
+.card-desc{
+  line-height:1.9;
+  margin-bottom:0;
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.message .split{
+  align-items:start;
+}
+
+.message-copy{
+  max-width:700px;
+  min-width:0;
+  padding-right:40px;
+}
+
+.message h3{
+  max-width:650px;
+  margin:0 0 28px;
+  line-height:1.55;
+  letter-spacing:.07em;
+}
+
+.message p{
+  max-width:650px;
+  line-height:2.2;
+  margin:0;
+}
+
+.signature{
+  line-height:1;
+  margin-top:38px;
+}
+
+
+/* =========================================================
+   RECRUIT
+   ========================================================= */
+
+.recruit .split{
+  align-items:start;
+}
+
+.recruit-copy{
+  max-width:700px;
+  min-width:0;
+}
+
+.recruit h3{
+  max-width:650px;
+  line-height:1.55;
+  margin:0 0 26px;
+  letter-spacing:.07em;
+}
+
+.recruit p{
+  max-width:650px;
+  line-height:2.15;
+  margin:0;
+}
+
+.side-words{
+  align-self:end;
+}
+
+
+/* =========================================================
+   COMPANY / CONTACT
+   ========================================================= */
+
+.bottom-grid{
+  align-items:start;
+}
+
+.bottom-title{
+  line-height:1.2;
+}
+
+.bottom-sub{
+  line-height:1.7;
+}
+
+.contact-box p{
+  line-height:2;
+  margin:18px 0 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:900px){
+
+  .container,
+  .hero-inner{
+    width:min(100% - 48px,1180px);
+  }
+
+  .hero-copy{
+    max-width:680px;
+  }
+
+  .hero h1{
+    max-width:650px;
+    font-size:clamp(52px,9vw,82px);
+    line-height:1.3;
+    letter-spacing:.075em;
+  }
+
+  .hero-lead{
+    max-width:560px;
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  .about-content,
+  .message-copy,
+  .recruit-copy{
+    max-width:720px;
+    padding-right:0;
+  }
+
+  .about-lead{
+    max-width:680px;
+    line-height:1.65;
+  }
+
+  .about-text{
+    max-width:680px;
+  }
+
+  .message h3,
+  .recruit h3{
+    max-width:680px;
+    line-height:1.6;
+  }
+
+  .message p,
+  .recruit p{
+    max-width:680px;
+  }
+
+  .side-words{
+    margin-top:10px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:560px){
+
+  .container,
+  .nav,
+  .hero-inner{
+    width:calc(100% - 36px);
+  }
+
+  /* HERO */
+  .hero{
+    min-height:720px;
+  }
+
+  .hero-inner{
+    padding-top:35px;
+  }
+
+  .hero-copy{
+    max-width:100%;
+  }
+
+  .hero-company{
+    font-size:13px;
+    letter-spacing:.14em;
+    margin-bottom:22px;
+    padding-left:45px;
+    line-height:1.6;
+  }
+
+  .hero-company:before{
+    width:32px;
+  }
+
+  .hero h1{
+    max-width:100%;
+    font-size:clamp(40px,11.5vw,55px);
+    line-height:1.4;
+    letter-spacing:.045em;
+    text-wrap:balance;
+  }
+
+  .hero-lead{
+    max-width:100%;
+    font-size:14px;
+    line-height:1.9;
+    letter-spacing:.07em;
+    margin-top:20px;
+  }
+
+  .hero-en{
+    font-size:12px;
+    line-height:1.7;
+    letter-spacing:.1em;
+  }
+
+
+  /* ABOUT */
+  .about{
+    padding:90px 0 110px;
+  }
+
+  .about .split{
+    gap:32px;
+  }
+
+  .about-lead{
+    max-width:100%;
+    font-size:25px;
+    line-height:1.75;
+    letter-spacing:.045em;
+    margin-bottom:24px;
+  }
+
+  .about-text{
+    max-width:100%;
+    font-size:13px;
+    line-height:2.15;
+    letter-spacing:.035em;
+  }
+
+  .about-keywords{
+    margin-top:34px;
+    gap:18px;
+    font-size:12px;
+    line-height:1.8;
+  }
+
+
+  /* SERVICE */
+  .services{
+    padding:85px 0 105px;
+  }
+
+  .service-head{
+    gap:28px;
+    margin-bottom:34px;
+  }
+
+  .service-head > p{
+    max-width:100%;
+    font-size:13px;
+    line-height:2;
+  }
+
+  .service-grid{
+    gap:16px;
+  }
+
+  .service-card,
+  .card-inner{
+    min-height:300px;
+  }
+
+  .card-inner{
+    padding:22px;
+  }
+
+  .card-number{
+    font-size:23px;
+  }
+
+  .card-title{
+    font-size:21px;
+    line-height:1.5;
+    letter-spacing:.055em;
+  }
+
+  .card-en{
+    font-size:10px;
+    letter-spacing:.16em;
+  }
+
+  .card-desc{
+    font-size:12px;
+    line-height:1.9;
+    margin-top:10px;
+  }
+
+
+  /* MESSAGE */
+  .message{
+    min-height:700px;
+    padding:95px 0 110px;
+  }
+
+  .message .split{
+    gap:34px;
+  }
+
+  .message-copy{
+    max-width:100%;
+    padding:0;
+  }
+
+  .message h3{
+    max-width:100%;
+    font-size:28px;
+    line-height:1.65;
+    letter-spacing:.045em;
+    margin-bottom:24px;
+  }
+
+  .message p{
+    max-width:100%;
+    font-size:13px;
+    line-height:2.15;
+    letter-spacing:.035em;
+  }
+
+  .signature{
+    font-size:35px;
+    margin-top:32px;
+  }
+
+
+  /* RECRUIT */
+  .recruit{
+    padding:90px 0 105px;
+  }
+
+  .recruit .split{
+    gap:32px;
+  }
+
+  .recruit-copy{
+    max-width:100%;
+    padding:0;
+  }
+
+  .recruit h3{
+    max-width:100%;
+    font-size:27px;
+    line-height:1.65;
+    letter-spacing:.045em;
+    margin-bottom:24px;
+  }
+
+  .recruit p{
+    max-width:100%;
+    font-size:13px;
+    line-height:2.15;
+    letter-spacing:.035em;
+  }
+
+  .side-words{
+    font-size:10px;
+    line-height:2;
+    letter-spacing:.28em;
+    margin-top:10px;
+  }
+
+
+  /* COMPANY */
+  .bottom{
+    padding:70px 0 48px;
+  }
+
+  .bottom-grid{
+    gap:42px;
+  }
+
+  .bottom-title{
+    font-size:30px;
+    line-height:1.25;
+  }
+
+  .bottom-sub{
+    font-size:11px;
+    line-height:1.8;
+  }
+
+  .bottom-links{
+    gap:14px 20px;
+    line-height:1.8;
+  }
+
+  .contact-box{
+    padding-top:28px;
+  }
+
+  .contact-box p{
+    font-size:12px;
+    line-height:2;
+  }
+
+
+  /* FOOTER */
+  .footer-inner{
+    gap:15px;
+  }
+
+  .footer-logo{
+    font-size:25px;
+  }
+
+  .footer-links{
+    gap:10px 15px;
+    line-height:1.8;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+   ========================================================= */
+
+@media(max-width:380px){
+
+  .container,
+  .nav,
+  .hero-inner{
+    width:calc(100% - 28px);
+  }
+
+  .hero h1{
+    font-size:40px;
+    line-height:1.42;
+  }
+
+  .hero-lead{
+    font-size:13px;
+  }
+
+  .about-lead{
+    font-size:23px;
+  }
+
+  .message h3{
+    font-size:26px;
+  }
+
+  .recruit h3{
+    font-size:25px;
+  }
+}
+```
+
+### 修正のポイント
+
+1. **見出しの最大幅を設定**
+
+   * 長い文章が横に広がって、背景や他要素とぶつかるのを防止。
+
+2. **`line-height`を統一**
+
+   * 特にスマホのH1・MESSAGE・RECRUITを調整。
+
+3. **スマホでは文字サイズを段階的に縮小**
+
+   * 560px以下
+   * 380px以下
+     の2段階で調整。
+
+4. **`padding-right`をスマホで解除**
+
+   * PC用の余白がスマホに残って文字幅を圧迫する問題を防止。
+
+5. **文章の最大幅を設定**
+
+   * 1行が長くなりすぎず、クラシックな余白感を維持。
+
+6. **JSは変更不要**
+
+   * 現在のJSはスクロール時のヘッダー変更とフェードインだけなので、文字被りの原因ではない。
+
+**重要なのは、既存CSSを大量に削除するのではなく、まず上記を`</style>`の直前に追加して確認すること。**
+これなら現在のデザインを壊さず、文字レイアウトだけを安全に調整できる。
+
+
+
+/* =========================================================
+   EXTRA SMALL
+   ========================================================= */
+
+@media(max-width:380px){
+
+  .container,
+  .nav,
+  .hero-inner{
+    width:calc(100% - 28px);
+  }
+
+  .hero h1{
+    font-size:40px;
+    line-height:1.42;
+  }
+
+  .hero-lead{
+    font-size:13px;
+  }
+
+  .about-lead{
+    font-size:23px;
+  }
+
+  .message h3{
+    font-size:26px;
+  }
+
+  .recruit h3{
+    font-size:25px;
+  }
+}
+```
+
